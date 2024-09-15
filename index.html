@@ -1,304 +1,69 @@
 
-<!DOCTYPE html>
+
+
+
+
+
+
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Dineshwaran S - UI/UX Developer</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      background-color: #f0f4f7;
-      color: #333;
-    }
-
-    header {
-      background-color: #4a90e2;
-      color: #fff;
-      padding: 1rem 0;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    header nav ul {
-      list-style: none;
-    }
-
-    header nav ul li {
-      display: inline;
-      margin: 0 20px;
-    }
-
-    header nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    header nav ul li a:hover {
-      color: #ffeb3b;
-    }
-
-    #hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-image.jpg') no-repeat center center/cover;
-      height: 350px;
-      text-align: center;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    }
-
-    #hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    #hero p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      opacity: 0.9;
-    }
-
-    section {
-      padding: 2.5rem;
-      margin: 0 auto;
-      max-width: 1000px;
-    }
-
-    section h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2rem;
-      color: #4a90e2;
-    }
-
-    #photo {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    #photo img {
-      border-radius: 50%;
-      width: 180px;
-      height: 180px;
-      border: 5px solid #4a90e2;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    #about p {
-      font-size: 1.2rem;
-      color: #555;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-
-    #skills ul, .tools ul {
-      display: flex;
-      justify-content: space-around;
-      list-style: none;
-      flex-wrap: wrap;
-    }
-
-    #skills ul li, .tools ul li {
-      background-color: #fff;
-      padding: 15px 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      margin: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    #skills ul li:hover, .tools ul li:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    #experience .job, #projects .project {
-      margin-bottom: 30px;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s;
-    }
-
-    #experience .job:hover, #projects .project:hover {
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    #experience h3, #projects h3 {
-      color: #ff6f61;
-      margin-bottom: 10px;
-    }
-
-    #experience ul, #projects ul {
-      list-style: square inside;
-      margin-left: 20px;
-    }
-
-    #contact a {
-      color: #4a90e2;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    /* Form styling */
-    .form-container {
-      max-width: 700px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 3rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .form-container h3 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 1.8rem;
-      color: #4a90e2;
-    }
-
-    .form-container input,
-    .form-container textarea {
-      width: 100%;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      font-size: 1rem;
-    }
-
-    .form-container button {
-      background-color: #4a90e2;
-      color: #fff;
-      padding: 15px;
-      border: none;
-      border-radius: 10px;
-      width: 100%;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .form-container button:hover {
-      background-color: #ff6f61;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: #4a90e2;
-      color: white;
-      margin-top: 20px;
-    }
-
-    footer p {
-      font-size: 1rem;
-      opacity: 0.8;
-    }
-
-
-
-
-
-
-
-
-/* button resume download */
-
-
-    .download-btn {
-  background: linear-gradient(45deg, #4e54c8, #8f94fb);
-  color: #fff;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  margin-top: 20px;
-}
-
-.download-btn:hover {
-  background: linear-gradient(45deg, #f5a623, #fda085);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.download-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-  </style>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+
+  <header class="header1">
+    <nav class="nav1">
+      <ul class="nav-list1">
+        <li class="nav-item1"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item1"><a href="#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item1"><a href="#experience" class="nav-link">Experience</a></li>
+        <li class="nav-item1"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item1"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
+  
 
-  <section id="hero">
-    <h1>Dineshwaran S</h1>
-    <h2>UI/UX Developer</h2>
+  <!-- <section id="hero">
+    <h1>Dineshwaran Soundararajan</h1>
+    <h2>Software Engineer</h2>
     <p>Designing seamless and user-centric digital experiences.</p>
   </section>
 
   <section id="photo">
     <img src="photo/profile.jpeg" alt="Dineshwaran S">
-  </section>
-
-  <!-- <section id="about">
-    <h2>About Me</h2>
-    <p>A dedicated UI/UX Developer with 1 year of experience, proficient in creating visually appealing and user-friendly interfaces. Passionate about delivering responsive designs that improve user experiences.</p>
-    <a href="Dineshwaran_Soundararajan_software_engineer_resume-J.pdf" download>
-        <button style="background-color: #4e54c8; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
-          Download Resume
-        </button>
-      </a>
   </section> -->
 
 
 
 
+  <section id="hero">
+    <div class="hero-content">
+      <img src="photo/profile.jpeg" alt="Dineshwaran S" class="profile-image">
+      <div class="text-container">
+        <h1>DINESHWARAN SOUNDARARAJAN</h1>
+        <h2>Software Engineer</h2>
+        <p>Designing seamless and user-centric digital experiences.</p>
+      </div>
+    </div>
+  </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>A dedicated UI/UX Developer with 1 year of experience, proficient in creating visually appealing and user-friendly interfaces. Passionate about delivering responsive designs that improve user experiences.</p>
+    <p>🚀 Innovative Full Stack Developer | Passionate Problem Solver 🚀</p>
+    <p>With a blend of creativity and technical prowess, I specialize in crafting dynamic and scalable solutions. From building robust Node.js backends to designing intuitive React.js interfaces, I thrive on transforming complex challenges into seamless user experiences. My journey as a Full Stack Developer has been fueled by a relentless pursuit of excellence and a commitment to pushing the boundaries of technology. Let's connect and explore how we can bring your vision to life!</p>
     <a href="Dineshwaran_Soundararajan_software_engineer_resume-J.pdf" download>
-      <button class="download-btn">
-        Download Resume
-      </button>
+      <button class="download-btn">Download Resume</button>
     </a>
   </section>
-  
-
-
 
   <section id="skills">
     <h2>Programming Languages</h2>
@@ -307,7 +72,6 @@
       <li>JavaScript</li>
       <li>C</li>
     </ul>
-
     <h2>Web Technologies</h2>
     <ul>
       <li>Node.js</li>
@@ -315,20 +79,17 @@
       <li>HTML</li>
       <li>CSS</li>
     </ul>
-
     <h2>Frameworks and Libraries</h2>
     <ul>
       <li>RestAPI</li>
       <li>Python Flask</li>
       <li>Express Framework</li>
     </ul>
-
     <h2>Database</h2>
     <ul>
       <li>MsSQL</li>
       <li>PostgreSQL</li>
     </ul>
-
     <h2>Tools</h2>
     <ul>
       <li>Postman</li>
@@ -344,10 +105,28 @@
     <div class="job">
       <h3>Software Engineer - Avasoft Pvt Ltd, Chennai, India</h3>
       <p>July 2023 - July 2024</p>
-      <ul>
-        <li>Created responsive UI designs that improved user experience and engagement.</li>
-        <li>Collaborated with product teams to implement innovative UI solutions for various projects.</li>
-      </ul>
+      <div class="job-description">
+        <h4>Full Stack Developer - CloudGen</h4>
+        <p>Technology: React.js, Node.js, MsSQL</p>
+        <ul>
+          <li>Led the development of CloudGen, a web application with intuitive drag-and-drop functionalities for service deployment and configuration.</li>
+          <li>Collaborated with cross-functional teams to gather requirements and integrate them into the application.</li>
+          <li>Utilized Plant UML to create visual representations, enhancing communication and understanding.</li>
+          <li>Implemented the 4D process (Define, Design, Development, Deployment) to streamline development, improving efficiency and reducing resource consumption.</li>
+          <li>Developed backend connectivity with Node.js to interface with AWS services and create project-specific architectures.</li>
+          <li>Designed a user-friendly interface using React.js for seamless service configuration and diagrammatic structuring.</li>
+        </ul>
+      </div>
+      <div class="job-description">
+        <h4>EDI-Support - ModeGlobal</h4>
+        <p>Technology: IBM Sterling Integrator, BTMS, TRITAN, JIRA</p>
+        <ul>
+          <li>Provided exceptional support to ModeGlobal clients, addressing inquiries, troubleshooting issues, and ensuring high satisfaction levels.</li>
+          <li>Managed support cases using IBM Sterling Integrator, BTMS, and Tritan tools, maintaining organization and efficiency.</li>
+          <li>Monitored EDI file flows in Lightwell and communicated promptly with carriers or customers about errors detected.</li>
+          <li>Developed EDI communications for new customers and carriers, using mapping software to ensure accurate and efficient data transmission.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -355,36 +134,23 @@
     <h2>Projects</h2>
     <div class="project">
       <h3>Portfolio Website</h3>
-      <p>Designed a responsive and interactive portfolio website to showcase my skills and work.</p>
+      <p>Designed and developed a responsive, interactive portfolio website to showcase skills and work, enhancing personal branding and online presence.</p>
     </div>
   </section>
-
-  <!-- <section id="get-in-touch">
-    <div class="form-container">
-      <h3>Contact Me</h3>
-      <form action="/submit-form" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section> -->
-
-
-
 
   <section id="contact">
     <h2>Contact</h2>
     <p>If you'd like to get in touch, feel free to reach out to me via email or connect with me on LinkedIn.</p>
     <ul>
-      <li>Email: <a href="mailto:dineshwaran@example.com">dineshwaran@example.com</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/dineshwaran-s">linkedin.com/in/dineshwaran-s</a></li>
+      <li>Email: <a href="mailto:s.dineshwaran001@gmail.com">s.dineshwaran001@gmail.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/dineshwaran-soundararajan-54b345192">linkedin.com/in/dineshwaran-s</a></li>
     </ul>
   </section>
 
   <footer>
-    <p>&copy; 2024 Dineshwaran S | UI/UX Developer</p>
+    <p>&copy; 2024 Dineshwaran S | Software Developer</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
